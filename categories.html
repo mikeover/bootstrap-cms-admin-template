@@ -87,23 +87,27 @@
 	      <li class="active">Categories</li>
 	    </ol>
 
-	    <table class="table table-striped">
-	      <tr>
-		<th><input type="checkbox"></th>
-		<th>Category Title</th>
-	      </tr>
-	      <tr>
-		<td><input type="checkbox"></td>
-		<td><a href="category.html">Category One</a></td>
-	      </tr>
-	      <tr>
-		<td><input type="checkbox"></td>
-		<td><a href="category.html">Category Two</a></td>
-	      </tr>
-	      <tr>
-		<td><input type="checkbox"></td>
-		<td><a href="category.html">Category Three</a></td>
-	      </tr>
+	    <table id="categories-table" class="table table-striped tablesorter">
+	      <thead>
+		<tr>
+		  <th><input type="checkbox"></th>
+		  <th>Category Title <i class="glyphicon glyphicon-chevron-down"></i></th>
+		</tr>
+	      </thead>
+	      <tbody>
+		<tr>
+		  <td><input type="checkbox"></td>
+		  <td><a href="category.html">Category One</a></td>
+		</tr>
+		<tr>
+		  <td><input type="checkbox"></td>
+		  <td><a href="category.html">Category Two</a></td>
+		</tr>
+		<tr>
+		  <td><input type="checkbox"></td>
+		  <td><a href="category.html">Category Three</a></td>
+		</tr>
+	      </tbody>
 	    </table>
 
 	    <nav>
@@ -140,6 +144,14 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/jquery.tablesorter.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        $("#categories-table").tablesorter({
+          sortList: [[0,0], [1,0]]
+        });
+      });
+    </script>
   </body>
 </html>
